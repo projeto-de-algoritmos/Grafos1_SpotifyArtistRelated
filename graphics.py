@@ -10,7 +10,7 @@ teste = [1, 2, 3],
 x_val = arr.array('i', [10, 15, 20, 150, 22, 80, 66]),
 y_val = [10, 15, 20, 150, 80, 17, 37],
 y_value = [20, 30],
-token = "Bearer BQCWgPDnbRFK0EgDAkzdbcBAIAu8nSUyo4o-dQt2EcN3zXfxOanfw3cqxboe33_tDoTEapRV0ciZYMtSdeTzYr8Q3qE3EIoDmNVjx7u61IeY2ddaNWrT_al8SuEjmYt_Nlfyw9yeMg-qWSWQqDMx"
+token = "Bearer BQAAUrVc5Gv6NyNF7hwnwzNyK1IuBA7uU__roPro4r8nq9R1I3FVxwibZQbn7ASog47bGiCa6gbKcNhhN_qkE_zp2FrEmeFV8hCKrJavqey8GGr_y04Vvt9X5eV0eRUyWXVdBK3irzCltBH-4Vyw"
 id = ''
 artistName = ''
 name = []
@@ -112,22 +112,59 @@ t_node_trace.text = secondArtists
 edge_trace = go.Scatter(
     x=[
         250, 250, 250, 325, 250, 175, 250, 200, 250, 300,
-        300, 325, 300, 325, 300, 320, 300, 310, 300, 300, 275, 225
+        300, 325, 300, 325, 300, 320, 300, 310, 300, 300,
     ], y=[
         250, 375, 250, 275, 250, 275, 250, 150, 250, 150,
-        150, 150, 150, 175, 150, 125, 150, 100, 150, 75, 425, 425
+        150, 150, 150, 175, 150, 125, 150, 100, 150, 75,
     ],
     line=dict(width=0.75, color='black'),
     hoverinfo='none',
     mode='lines')
 
+edge_trace2 = go.Scatter(
+    x=[
+        250, 250,250, 225, 250, 213, 250, 287, 250, 275
+    ], y=[
+        375, 450, 375, 425, 375, 400, 375, 400, 375, 425
+    ],
+    line=dict(width=0.75, color='black'),
+    hoverinfo='none',
+    mode='lines')
 
-fig = go.Figure(data=[f_node_trace, s_node_trace, t_node_trace, edge_trace], layout=go.Layout(
+edge_trace3 = go.Scatter(
+        x=[
+        200, 175, 200, 175, 200, 180, 200, 190, 200, 200
+        ], y=[
+        150,150, 150, 175, 150, 125, 150, 100, 150, 75
+        ],
+        line=dict(width=0.75, color='black'),
+        hoverinfo='none',
+        mode='lines')
+
+edge_trace4 = go.Scatter(
+        x=[
+        325, 365, 325, 355, 325, 355, 325, 340, 325, 340
+        ], y=[
+        275, 275, 275, 300, 275, 250, 275, 225, 275, 325
+        ],
+        line=dict(width=0.75, color='black'),
+        hoverinfo='none',
+        mode='lines')
+
+edge_trace5 = go.Scatter(
+        x=[
+        175, 135, 175, 145, 175, 145, 175, 160, 175, 160,
+        ], y=[
+        275,275, 275, 250, 275, 300, 275, 325, 275, 225,
+        ],
+        line=dict(width=0.75, color='black'),
+        hoverinfo='none',
+        mode='lines')
+
+fig = go.Figure(data=[f_node_trace, s_node_trace, t_node_trace, edge_trace, edge_trace2,  edge_trace3,  edge_trace4,  edge_trace5], layout=go.Layout(
     title='<b>'+"Artistas Relacionados"+'</b>',
     titlefont_size=16,
     margin=dict(b=20, l=5, r=5, t=40),
-
-
 ))
 
 
