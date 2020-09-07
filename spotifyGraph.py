@@ -3,7 +3,7 @@ import urllib.parse
 from operator import attrgetter
 
 
-token = "Bearer BQBEu18hZSOPxxTkz2b0VrqhCHKfP4AuYb6azZKq_xkiSyGy_JjvnosrPBMLtu4G5M3CudPnBPEAWXflPuzZqT_clf6qXOH10SdqU2RX6r7tS3phw_td9Tw7OZKz6af6ug8qmwA6HTM3GWzpQmM6"
+token = "Bearer"
 id = ''
 artistName = ''
 firstArtists = []
