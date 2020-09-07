@@ -10,7 +10,7 @@ teste = [1, 2, 3],
 x_val = arr.array('i', [10, 15, 20, 150, 22, 80, 66]),
 y_val = [10, 15, 20, 150, 80, 17, 37],
 y_value = [20, 30],
-token = "Bearer BQAAUrVc5Gv6NyNF7hwnwzNyK1IuBA7uU__roPro4r8nq9R1I3FVxwibZQbn7ASog47bGiCa6gbKcNhhN_qkE_zp2FrEmeFV8hCKrJavqey8GGr_y04Vvt9X5eV0eRUyWXVdBK3irzCltBH-4Vyw"
+token = "Bearer Adicione o token aqui"
 id = ''
 artistName = ''
 name = []
@@ -66,20 +66,22 @@ getSecondRelatedArtists(idFirst[1])
 f_node_trace = go.Scatter(
     x=[250, 250], y=[250, 250],
     mode='markers',
+    name='Primeiro artista',
     hoverinfo='text',
     marker=dict(
         reversescale=True,
-        size=30,
+        size=50,
         line_width=0))
 
 s_node_trace = go.Scatter(
     x=[325, 250, 175, 200, 300],
     y=[275, 375, 275, 150, 150],
     mode='markers',
+    name='Artistas secundarios',
     hoverinfo='text',
     marker=dict(
         reversescale=True,
-        size=25,
+        size=40,
         line_width=0))
 
 t_node_trace = go.Scatter(
@@ -99,9 +101,10 @@ t_node_trace = go.Scatter(
     ],
     mode='markers',
     hoverinfo='text',
+    name="artistas terciarios",
     marker=dict(
         reversescale=True,
-        size=15,
+        size=30,
         line_width=0))
 
 
@@ -119,11 +122,12 @@ edge_trace = go.Scatter(
     ],
     line=dict(width=0.75, color='black'),
     hoverinfo='none',
+
     mode='lines')
 
 edge_trace2 = go.Scatter(
     x=[
-        250, 250,250, 225, 250, 213, 250, 287, 250, 275
+        250, 250, 250, 225, 250, 213, 250, 287, 250, 275
     ], y=[
         375, 450, 375, 425, 375, 400, 375, 400, 375, 425
     ],
@@ -132,34 +136,34 @@ edge_trace2 = go.Scatter(
     mode='lines')
 
 edge_trace3 = go.Scatter(
-        x=[
+    x=[
         200, 175, 200, 175, 200, 180, 200, 190, 200, 200
-        ], y=[
-        150,150, 150, 175, 150, 125, 150, 100, 150, 75
-        ],
-        line=dict(width=0.75, color='black'),
-        hoverinfo='none',
-        mode='lines')
+    ], y=[
+        150, 150, 150, 175, 150, 125, 150, 100, 150, 75
+    ],
+    line=dict(width=0.75, color='black'),
+    hoverinfo='none',
+    mode='lines')
 
 edge_trace4 = go.Scatter(
-        x=[
+    x=[
         325, 365, 325, 355, 325, 355, 325, 340, 325, 340
-        ], y=[
+    ], y=[
         275, 275, 275, 300, 275, 250, 275, 225, 275, 325
-        ],
-        line=dict(width=0.75, color='black'),
-        hoverinfo='none',
-        mode='lines')
+    ],
+    line=dict(width=0.75, color='black'),
+    hoverinfo='none',
+    mode='lines')
 
 edge_trace5 = go.Scatter(
-        x=[
+    x=[
         175, 135, 175, 145, 175, 145, 175, 160, 175, 160,
-        ], y=[
-        275,275, 275, 250, 275, 300, 275, 325, 275, 225,
-        ],
-        line=dict(width=0.75, color='black'),
-        hoverinfo='none',
-        mode='lines')
+    ], y=[
+        275, 275, 275, 250, 275, 300, 275, 325, 275, 225,
+    ],
+    line=dict(width=0.75, color='black'),
+    hoverinfo='none',
+    mode='lines')
 
 fig = go.Figure(data=[f_node_trace, s_node_trace, t_node_trace, edge_trace, edge_trace2,  edge_trace3,  edge_trace4,  edge_trace5], layout=go.Layout(
     title='<b>'+"Artistas Relacionados"+'</b>',
