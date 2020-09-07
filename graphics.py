@@ -15,7 +15,7 @@ f_node_trace = go.Scatter(
         marker=dict(
             reversescale=True,
             size=30,
-            line_width=2))
+            line_width=0))
 
 s_node_trace = go.Scatter(
         x=[ 325 , 250, 175, 200, 300], 
@@ -25,17 +25,17 @@ s_node_trace = go.Scatter(
         marker=dict(
             reversescale=True,
             size=25,
-            line_width=2))
+            line_width=0))
 
 t_node_trace = go.Scatter(
-        x=[ 0 , 500, 
+        x=[
         250, 275, 225, 287, 213,
         135, 145, 145, 160, 160,
         365, 355, 355, 340, 340,
         175, 175, 180, 190, 200,
         325, 325, 320, 310, 300,
         ], 
-        y = [0 ,500, 
+        y = [
         450, 425, 425, 400, 400,
         275, 250, 300, 225, 325,
         275, 250, 300, 225, 325,
@@ -47,13 +47,19 @@ t_node_trace = go.Scatter(
         marker=dict(
             reversescale=True,
             size=15,
-            line_width=2))
+            line_width=0))
           
 s_node_trace.text = cars
 
 edge_trace = go.Scatter(
-        x=[250,250], y=[250,375],
-        line=dict(width=1, color='magenta'),
+        x=[
+        250,250, 250, 325, 250, 175, 250, 200, 250, 300,
+        300, 325, 300, 325, 300, 320, 300, 310, 300, 300,
+        ], y=[
+        250,375, 250, 275, 250, 275, 250, 150, 250, 150,
+        150, 150, 150, 175, 150, 125, 150, 100, 150, 75,
+        ],
+        line=dict(width=0.75, color='black'),
         hoverinfo='none',
         mode='lines')
 
